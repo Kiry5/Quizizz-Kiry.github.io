@@ -67,17 +67,24 @@
         <div class="submit-btn">
             <button onclick="submitQuiz()">Submit</button>
         </div>
+        <button onclick="goBack()" style="background-color: blue; color: white;">Voltar</button>
+
+
     </div>
 
     <script>
-        function submitQuiz() {
-            var answer = document.querySelector('input[name="answer"]:checked');
-            if (answer) {
-                alert("Resposta selecionada: " + answer.value);
+    function submitQuiz() {
+        var answer = document.querySelector('input[name="answer"]:checked');
+        if (answer) {
+            if (answer.value === 'd') {
+                alert("Resposta correta!");
             } else {
-                alert("Por favor, selecione uma resposta.");
+                alert("Resposta incorreta!");
             }
+        } else {
+            alert("Por favor, selecione uma resposta.");
         }
-    </script>
+    }
+</script>
 </body>
 </html>
