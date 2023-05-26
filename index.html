@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz: Métodos de Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .quiz-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .submit-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz: Métodos de Pagamento</h1>
+        <div class="question">
+            <p>Qual dos seguintes métodos de pagamento é amplamente utilizado para compras no exterior?</p>
+        </div>
+        <div class="options">
+            <label>
+                <input type="radio" name="answer" value="a">
+                a) Cartão de crédito
+            </label>
+            <label>
+                <input type="radio" name="answer" value="b">
+                b) Dinheiro em espécie
+            </label>
+            <label>
+                <input type="radio" name="answer" value="c">
+                c) Transferência bancária internacional
+            </label>
+            <label>
+                <input type="radio" name="answer" value="d">
+                d) Criptomoedas
+            </label>
+        </div>
+        <div class="submit-btn">
+            <button onclick="submitQuiz()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var answer = document.querySelector('input[name="answer"]:checked');
+            if (answer) {
+                alert("Resposta selecionada: " + answer.value);
+            } else {
+                alert("Por favor, selecione uma resposta.");
+            }
+        }
+    </script>
+</body>
+</html>
